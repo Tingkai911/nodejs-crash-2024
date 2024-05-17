@@ -2,7 +2,8 @@ import http from 'http';
 import fs from 'fs/promises';
 import url from 'url';
 import path from 'path';
-const PORT = 8000;
+// const PORT = 8000;
+const PORT = process.env.PORT; // Read from .env file (refer to script in package.json, the --env-file flag is needed)
 
 // Get current path
 const __filename = url.fileURLToPath(import.meta.url);
@@ -13,6 +14,8 @@ const server = http.createServer(async (req, res) => {
     // Check if GET request
     if (req.method === 'GET') {
       let filePath;
+
+      // A very simple router
       if (req.url === '/') {
         filePath = path.join(__dirname, 'public', 'index.html');
       } else if (req.url === '/about') {
