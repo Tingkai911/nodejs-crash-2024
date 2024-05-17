@@ -23,3 +23,10 @@ Execution Order:
 ![img_2.png](img_2.png)
 
 ![img_3.png](img_3.png)
+
+
+# Fetch API
+
+https://blog.webdevsimplified.com/2022-01/js-fetch-api/
+
+https://www.youtube.com/watch?v=cuEtnrL9-H0
